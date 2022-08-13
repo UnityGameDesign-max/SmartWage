@@ -1,0 +1,11 @@
+.avatarPicture{
+    border: 1px solid var(--COLOR-BORDER);
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    margin-right: 20px;
+    margin-top: 20px;
+}
+.profile-client-name{
+    margin-top: 3px;
+}

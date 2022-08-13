@@ -1,38 +1,88 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+
+:root{
+    --COLOR-TYPOGRAPHY: #495057;
+    --COLOR-BACKGROUND-SHADE: #F7F7F8;
+    --COLOR-LIGHT-SHADE: #868E96;
+    --COLOR-BORDER: #DEE2E6;
+}
+.App{
+  width: 100vw;
+  height: 100vh;
+  font-family: 'Roboto', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body{
+  margin: 0;
+  padding: 0;
+}
+p, h1{
+  margin: 0;
+}
+.smartWage-align-horizontal{
+  display: flex;
+  align-items: center;
+}
+.sw-pl-20{
+  padding-left: 20px;
+}
+.sw-p-50{
+  padding: 50px;
+}
+.sw-pr-20{
+  padding-right: 20px;
+}
+.sw-pt-40{
+  padding-top: 50px;
+}
+.sw-mr-20{
+  margin-right: 20px;
+}
+.sw-mt-20{
+  margin-top: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.smartWage-align-vertical-space{
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-between;
+}
+.smartWage-flex-items{
+  display: flex;
 }
 
-.App-link {
-  color: #61dafb;
+.smartWage-typography-heading{
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 28.13px;
+  letter-spacing: 0.16px;
+  color: var(--COLOR-TYPOGRAPHY);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.smartWage-typography-title{
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 18.75px;
+  letter-spacing: 0.16px;
+  color: var(--COLOR-TYPOGRAPHY);
+}
+.smartWage-typography-subtitle{
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.16px;
+  color: var(--COLOR-TYPOGRAPHY);
+}
+.smartWage-typography-light{
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--COLOR-LIGHT-SHADE);
+}
+.smartWage-typography-normal{
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.16px;
+  color: var(--COLOR-TYPOGRAPHY);
 }
