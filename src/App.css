@@ -1,10 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
 
 :root{
-    --COLOR-TYPOGRAPHY: #495057;
-    --COLOR-BACKGROUND-SHADE: #F7F7F8;
-    --COLOR-LIGHT-SHADE: #868E96;
-    --COLOR-BORDER: #DEE2E6;
+  --COLOR-TYPOGRAPHY: #495057;
+  --COLOR-BACKGROUND-SHADE: #F7F7F8;
+  --COLOR-LIGHT-SHADE: #868E96;
+  --COLOR-BORDER: #DEE2E6;
 }
 .App{
   width: 100vw;
@@ -35,11 +35,26 @@ p, h1{
 .sw-pt-40{
   padding-top: 50px;
 }
+.sw-p-10{
+  padding: 10px;
+}
+.sw-odd-row:nth-child(odd){
+  background-color: var(--COLOR-BACKGROUND-SHADE);
+}
 .sw-mr-20{
   margin-right: 20px;
 }
 .sw-mt-20{
   margin-top: 20px;
+}
+.sw-mb-20{
+  margin-bottom: 20px;
+}
+.sw-width-fill{
+  width: 100%;
+}
+.sw-width-expand{
+  flex: 1;
 }
 
 .smartWage-align-vertical-space{
@@ -50,7 +65,9 @@ p, h1{
 .smartWage-flex-items{
   display: flex;
 }
-
+.smartWage-align-text{
+  text-align: left;
+}
 .smartWage-typography-heading{
   font-weight: 600;
   font-size: 24px;
@@ -80,7 +97,7 @@ p, h1{
   color: var(--COLOR-LIGHT-SHADE);
 }
 .smartWage-typography-normal{
-  font-weight: 400;
+  font-weight: 500;
   font-size: 14px;
   line-height: 20px;
   letter-spacing: 0.16px;
