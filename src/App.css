@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+
 
 :root{
   --COLOR-TYPOGRAPHY: #495057;
@@ -35,8 +35,8 @@ p, h1{
 .sw-pt-40{
   padding-top: 50px;
 }
-.sw-p-10{
-  padding: 10px;
+.sw-p-15{
+  padding: 15px;
 }
 .sw-odd-row:nth-child(odd){
   background-color: var(--COLOR-BACKGROUND-SHADE);
@@ -44,6 +44,13 @@ p, h1{
 .sw-mr-20{
   margin-right: 20px;
 }
+.sw-ml-8{
+  margin-left: 8px;
+}
+.focus-none:focus{
+  outline: none;
+}
+
 .sw-mt-20{
   margin-top: 20px;
 }
@@ -55,6 +62,13 @@ p, h1{
 }
 .sw-width-expand{
   flex: 1;
+}
+.sw-icon{
+  width: 22px;
+  cursor: pointer;
+}
+.sw-border-bottom{
+  border-bottom: 1px solid var(--COLOR-BORDER);
 }
 
 .smartWage-align-vertical-space{
