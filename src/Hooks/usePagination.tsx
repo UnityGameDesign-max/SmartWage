@@ -10,6 +10,9 @@ const usePagination = (data : any, itemsPerPage: number) => {
     return data.slice(begin, end);
   }
 
+  const totalDataLength = () => {
+    return data.length;
+  }
   const nextPage = () => {
     setCurrentPage((currentPage) => Math.min(currentPage + 1, maxPage));
     return currentPage;
@@ -19,7 +22,7 @@ const usePagination = (data : any, itemsPerPage: number) => {
     setCurrentPage((currentPage) => Math.max(currentPage - 1, 1));
     return currentPage;
   }
-  return { nextPage, previousPage, currentData, currentPage, maxPage }
+  return { nextPage, previousPage, currentData, totalDataLength, currentPage, maxPage }
 }
 
 export default usePagination

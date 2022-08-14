@@ -1,0 +1,9 @@
+@media (max-width: 935px) {
+    thead{
+        display: none;
+    }
+    tbody, tr, td{
+        display: block;
+        width: 100%;
+    }
+}

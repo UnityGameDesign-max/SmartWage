@@ -1,4 +1,4 @@
-export interface SurveyData{
+export interface SurveyModel{
     SurveyName: string;
     CreationDate: string;
     Responses: string;

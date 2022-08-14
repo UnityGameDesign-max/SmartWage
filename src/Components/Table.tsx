@@ -1,4 +1,5 @@
 import React from 'react'
+import '../Styles/table.css'
 
 const Table = (props : any) : JSX.Element => {
 

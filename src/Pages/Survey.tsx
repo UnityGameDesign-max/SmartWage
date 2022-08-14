@@ -3,13 +3,13 @@ import Pagination from '../Components/Pagination';
 import Table from '../Components/Table'
 import usePagination from '../Hooks/usePagination';
 import {columns} from '../Utility/ColumnData';
-import { SurveyData } from '../Utility/SurveyData';
+import { SurveyModel } from '../Utility/SurveyModel';
 import { BASE_URL } from '../Utility/API_ROUTES';
 
 
 const Survey = () : JSX.Element=> {
 
-  const [surveys, setSurvey] = useState<SurveyData[]>([]);
+  const [surveys, setSurvey] = useState<SurveyModel[]>([]);
   const [itemsPerRow, setItemsPerRow] = useState<string>("3");
 
   useEffect(() => {
@@ -18,7 +18,7 @@ const Survey = () : JSX.Element=> {
     .then(surveyData  => setSurvey(surveyData));
   }, [])
 
-  const {nextPage, previousPage, currentData, currentPage, maxPage} = usePagination(surveys, parseInt(itemsPerRow));
+  const {nextPage, totalDataLength, previousPage, currentData, currentPage, maxPage} = usePagination(surveys, parseInt(itemsPerRow));
 
   return (
     <div className="sw-p-50 sw-width-expand">
@@ -26,10 +26,12 @@ const Survey = () : JSX.Element=> {
       <Table columnData={columns} tableData={currentData()} />
       <Pagination 
         setItemsPerRow={ setItemsPerRow } 
-        nextPage={nextPage()} 
+        nextPage={nextPage}
+        totalDataLength= {totalDataLength}
         previousPage={previousPage} 
         currentData={currentData()} 
-        currentPage={currentPage} maxPage={maxPage}/>
+        currentPage={currentPage} maxPage={maxPage}
+      />
     </div> 
   )
 }
